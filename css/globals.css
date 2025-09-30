@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff; /* white */
+  --foreground: #000000; /* black */
+}
+
+[data-theme="dark"] {
+  --background: #000000; /* black */
+  --foreground: #ffffff; /* white */
+}
+
+/* Base styles */
+html, body {
+  height: 100%;
+}
+
+body { background: var(--background); color: var(--foreground); }
+
+/* Scrollbar - minimal */
+* {
+  scrollbar-color: var(--border) transparent;
+  scrollbar-width: thin;
+}
+
+/* Prose tweaks for readability */
+.prose p {
+  line-height: 1.7;
+}
+
+/* Light mode contrast boosts */
+[data-theme="light"] .border-black\/10 {
+  /* Increase border contrast in light mode */
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-theme="light"] .opacity-80 { opacity: 0.92 !important; }
+[data-theme="light"] .opacity-70 { opacity: 0.88 !important; }
+[data-theme="light"] .opacity-60 { opacity: 0.84 !important; }
+
+/* Hover states: keep links legible */
+[data-theme="light"] .hover\:opacity-70:hover { opacity: 0.9 !important; }

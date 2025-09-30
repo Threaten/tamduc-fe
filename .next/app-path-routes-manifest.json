@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/blogs/[slug]/page": "/blogs/[slug]",
+  "/blogs/page": "/blogs",
+  "/contact/page": "/contact",
+  "/departments/[slug]/page": "/departments/[slug]",
+  "/departments/page": "/departments",
+  "/emergency/page": "/emergency",
+  "/faq/page": "/faq",
+  "/favicon.ico/route": "/favicon.ico",
+  "/gallery/page": "/gallery",
+  "/page": "/",
+  "/reservation/page": "/reservation",
+  "/robots.txt/route": "/robots.txt",
+  "/services/page": "/services",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/teams/[staff]/page": "/teams/[staff]",
+  "/teams/page": "/teams"
+}

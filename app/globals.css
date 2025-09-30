@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+[data-theme="dark"],
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Rich text utility styles (Tailwind-like, written in vanilla CSS for broader compatibility) */
+.richtext-content h1,
+.richtext-content h2,
+.richtext-content h3,
+.richtext-content h4,
+.richtext-content h5,
+.richtext-content h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.richtext-content h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+}
+@media (min-width: 768px) {
+  .richtext-content h1 {
+    font-size: 2.5rem;
+  }
+}
+.richtext-content h2 {
+  font-size: 1.875rem;
+}
+@media (min-width: 768px) {
+  .richtext-content h2 {
+    font-size: 2.125rem;
+  }
+}
+.richtext-content h3 {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .richtext-content h3 {
+    font-size: 1.75rem;
+  }
+}
+.richtext-content h4 {
+  font-size: 1.25rem;
+}
+.richtext-content p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+.richtext-content ul,
+.richtext-content ol {
+  margin: 0.85rem 0 1.1rem 1.5rem;
+  padding: 0;
+}
+.richtext-content ul {
+  list-style: disc;
+}
+.richtext-content ul ul {
+  list-style: circle;
+  margin-top: 0.35rem;
+}
+.richtext-content ol {
+  list-style: decimal;
+}
+.richtext-content li {
+  margin: 0.25rem 0;
+}
+.richtext-content blockquote {
+  border-left: 4px solid rgba(0, 0, 0, 0.2);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+[data-theme="dark"] .richtext-content blockquote,
+.dark .richtext-content blockquote {
+  border-left-color: rgba(255, 255, 255, 0.3);
+}
+.richtext-content hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 2.25rem 0;
+}
+[data-theme="dark"] .richtext-content hr,
+.dark .richtext-content hr {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+.richtext-content a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.richtext-content code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+[data-theme="dark"] .richtext-content code,
+.dark .richtext-content code {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Button utility classes */
+/* Because this build setup isn't processing @apply here, we hand-write equivalent utility styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem; /* py-2 px-5 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+}
+.dark .btn-primary,
+[data-theme="dark"] .btn-primary {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #ffffff;
+}
+.dark .btn-primary:hover,
+[data-theme="dark"] .btn-primary:hover {
+  background: #000;
+}
+.btn-primary:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 2px;
+}
+.dark .btn-primary:focus-visible,
+[data-theme="dark"] .btn-primary:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.6);
+}
+.btn-primary:disabled {
+  opacity: 0.55;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #000;
+  background: transparent;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.dark .btn-secondary,
+[data-theme="dark"] .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.dark .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn-secondary:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+  outline-offset: 2px;
+}
+.dark .btn-secondary:focus-visible,
+[data-theme="dark"] .btn-secondary:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.5);
+}
