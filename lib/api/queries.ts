@@ -163,10 +163,7 @@ const GET_DPEARTMENTS = gql`
           url
         }
         staffs(
-          where: {
-            status: { equals: Active }
-            AND: { role: { equals: Doctor } }
-          }
+          where: { status: { equals: Active } }
           limit: $staffPreviewLimit
         ) {
           docs {

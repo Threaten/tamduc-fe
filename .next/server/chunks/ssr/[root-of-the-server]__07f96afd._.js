@@ -929,10 +929,7 @@ const GET_DPEARTMENTS = __TURBOPACK__imported__module__$5b$project$5d2f$node_mod
           url
         }
         staffs(
-          where: {
-            status: { equals: Active }
-            AND: { role: { equals: Doctor } }
-          }
+          where: { status: { equals: Active } }
           limit: $staffPreviewLimit
         ) {
           docs {

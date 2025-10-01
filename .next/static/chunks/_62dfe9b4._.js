@@ -902,7 +902,7 @@ function _templateObject3() {
 }
 function _templateObject4() {
     const data = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$swc$2f$helpers$2f$esm$2f$_tagged_template_literal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["_"])([
-        "\n  query getDepartments($deptLimit: Int = 100, $staffPreviewLimit: Int = 100) {\n    Departments(limit: $deptLimit) {\n      docs {\n        id\n        slug\n        title\n        about\n        icons {\n          url\n        }\n        staffs(\n          where: {\n            status: { equals: Active }\n            AND: { role: { equals: Doctor } }\n          }\n          limit: $staffPreviewLimit\n        ) {\n          docs {\n            slug\n          }\n        }\n      }\n      totalDocs\n      limit\n    }\n  }\n"
+        "\n  query getDepartments($deptLimit: Int = 100, $staffPreviewLimit: Int = 100) {\n    Departments(limit: $deptLimit) {\n      docs {\n        id\n        slug\n        title\n        about\n        icons {\n          url\n        }\n        staffs(\n          where: { status: { equals: Active } }\n          limit: $staffPreviewLimit\n        ) {\n          docs {\n            slug\n          }\n        }\n      }\n      totalDocs\n      limit\n    }\n  }\n"
     ]);
     _templateObject4 = function() {
         return data;
