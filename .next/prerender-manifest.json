@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/departments/cardiology":{},"/departments/pediatrics":{},"/departments/orthopedics":{},"/departments/dermatology":{},"/departments/neurology":{},"/teams/linh-nguyen":{},"/teams/minh-le":{},"/teams/thu-tran":{},"/teams/quang-phan":{},"/teams/ly-hoang":{},"/teams/an-vo":{}},"dynamicRoutes":{"/departments/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/departments/[slug]","routeRegex":"^\\/departments\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/teams/[staff]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/teams/[staff]","routeRegex":"^\\/teams\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"5ec1ab3cc414ad8d9ca83a77a2e0ffbb","previewModeSigningKey":"1307de8ec69e3de605b5ea22b7de3d7eff5e4a8b3d226b50d5eae78449b9319e","previewModeEncryptionKey":"edff914a702f723ff2e3ad5a71d568fc84c84935b30a7a0287d7fab7eb69b7da"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "4862787e2c08b35a8367506ea9cbe88c",
+    "previewModeSigningKey": "620bcbcba3625e945e12ee38598b59e007fc455b01ff04f6176c7838e303bd76",
+    "previewModeEncryptionKey": "347162e8500cbd0156102a6848b6a32367c7a28f8b5953660656f4fb143c5c05"
+  }
+}
